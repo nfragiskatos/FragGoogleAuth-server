@@ -1,9 +1,6 @@
 package com.example
 
-import com.example.plugins.configureMonitoring
-import com.example.plugins.configureRouting
-import com.example.plugins.configureSerialization
-import com.example.plugins.configureSession
+import com.example.plugins.*
 import io.ktor.server.application.*
 
 fun main(args: Array<String>): Unit =
@@ -11,6 +8,7 @@ fun main(args: Array<String>): Unit =
 
 @Suppress("unused")
 fun Application.module() {
+    configureAuth()
     configureRouting()
     configureSerialization()
     configureMonitoring()
