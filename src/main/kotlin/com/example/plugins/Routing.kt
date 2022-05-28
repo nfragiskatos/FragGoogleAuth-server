@@ -1,5 +1,6 @@
 package com.example.plugins
 
+import authorizedRoute
 import com.example.routes.unauthorizedRoute
 import io.ktor.server.application.*
 import io.ktor.server.routing.*
@@ -9,6 +10,7 @@ fun Application.configureRouting() {
 
     routing {
         rootRoute()
+        authorizedRoute()
         unauthorizedRoute()
     }
 }
