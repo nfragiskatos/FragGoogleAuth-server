@@ -7,4 +7,5 @@ fun Routing.rootRoute() {
     get(Root.path) {
         call.respondText("Welcome to ktor server")
     }
+    
 }
