@@ -7,7 +7,7 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
 fun Routing.unauthorizedRoute() {
-    get(Endpoint.Unauthorized.path) {
+    post(Endpoint.Unauthorized.path) {
         call.respond(
             message = "Not Authorized",
             status = HttpStatusCode.Unauthorized
