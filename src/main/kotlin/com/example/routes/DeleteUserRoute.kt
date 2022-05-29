@@ -37,6 +37,7 @@ fun Route.deleteUserRoute(
                     call.respondRedirect(Endpoint.Unauthorized.path)
                 }
             }
+            
         }
     }
 }
