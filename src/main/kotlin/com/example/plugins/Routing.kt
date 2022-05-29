@@ -5,6 +5,7 @@ import com.example.domain.repository.UserDataSource
 import com.example.routes.getUserInfoRoute
 import com.example.routes.tokenVerificationRoute
 import com.example.routes.unauthorizedRoute
+import com.example.routes.updateUserInfoRoute
 import io.ktor.server.application.*
 import io.ktor.server.routing.*
 import org.koin.java.KoinJavaComponent.inject
@@ -17,6 +18,7 @@ fun Application.configureRouting() {
         rootRoute()
         tokenVerificationRoute(application, userDataSource)
         getUserInfoRoute(application, userDataSource)
+        updateUserInfoRoute(application, userDataSource)
         authorizedRoute()
         unauthorizedRoute()
     }
