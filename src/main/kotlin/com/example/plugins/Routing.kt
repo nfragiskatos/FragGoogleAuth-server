@@ -2,6 +2,7 @@ package com.example.plugins
 
 import authorizedRoute
 import com.example.domain.repository.UserDataSource
+import com.example.routes.getUserInfoRoute
 import com.example.routes.tokenVerificationRoute
 import com.example.routes.unauthorizedRoute
 import io.ktor.server.application.*
@@ -15,6 +16,7 @@ fun Application.configureRouting() {
         val userDataSource: UserDataSource by inject(UserDataSource::class.java)
         rootRoute()
         tokenVerificationRoute(application, userDataSource)
+        getUserInfoRoute(application, userDataSource)
         authorizedRoute()
         unauthorizedRoute()
     }
